@@ -1,0 +1,10 @@
+<div class="post-card">
+    <% include ./post_text %>
+    <% include ./post_buttons %>
+    <% include ./reply_button %>
+    <% if (post.post_replies.length > 0) { %>
+        <% post.post_replies.forEach((reply) => { %>
+            <% include ../replies/reply_card %>
+        <% }) %>
+    <% } %>
+</div>

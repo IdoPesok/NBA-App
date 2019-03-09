@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+
+<form action="/register" method="POST" class="form">
+    <h1 class="form-title">Sign Up</h1>
+    <div>
+        <p class="form-label">Username</p>
+        <input type="text" name="username" class="form-input">
+    </div>
+    <div>
+        <p class="form-label">Password</p>
+        <input type="password" name="password" class="form-input">
+    </div>
+    <div>
+        <input value="register" type="submit" class="form-submit">
+    </div>
+    <a href="/login" class="form-subtitle">Already Have An Account? Login</a>
+</form>
+
+<% include ../partials/footer %>

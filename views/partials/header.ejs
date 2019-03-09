@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>NBA App</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <script src="/js/main.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <nav id="main-nav">
+            <div class="nav-title">
+                <a href="/">NBA App</a>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="/discussion">Discussion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/standings">Standings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/schedule">Schedule</a>
+                </li>
+                <% if (!currentUser) { %>
+                    <li class="nav-item">
+                        <a href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/register">Register</a>
+                    </li>
+                <% } else {  %>
+                    <li class="nav-item">
+                        <a href="/account">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/logout">Logout</a>
+                    </li>
+                <% } %>
+                <li class="nav-menu-icon" onclick="handleResponsive()">
+                    <i class="fa fa-bars fa-lg"></i>
+                </li>
+            </ul>
+        </nav>
+        <% if (error_message != "") { %>
+            <div class="flash-message flash-error">
+                <p><%= error_message %></p>
+            </div>
+        <% } %>
+        <% if (success_message != "") { %>
+            <div class="flash-message flash-success">
+                <p><%= success_message %></p>
+            </div>
+        <% } %>

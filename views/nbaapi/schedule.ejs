@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+<h1 class="text-center top-buffer">Today's Games</h1>
+<div class="vertical-buffer">
+    <% data.forEach(game => { %>
+        <div class="game-card">
+            <h4><%= game[14] %></h4>
+            <h4>VS</h4>
+            <h4><%= game[15] %></h4>
+        </div>
+    <% }) %>
+</div>
+
+<% include ../partials/footer %>

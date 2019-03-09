@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div class="conf-card">
+    <h1 class="text-center">Eastern Conference</h1>
+    <% east["rowSet"].forEach((team) => { %>
+        <div class="team-card">
+            <p><%= team[12] %></p>
+            <h4 class="standings-title"><%= team[5] %></h4>
+            <p><%= team[7] %> - <%= team[8] %></p>
+        </div>
+    <% }) %>
+</div>
+
+<div class="conf-card">
+    <h1 class="text-center">Western Conference</h1>
+    <% west["rowSet"].forEach((team) => { %>
+        <div class="team-card">
+            <p><%= team[12] %></p>
+            <h4 class="standings-title"><%= team[5] %></h4>
+            <p><%= team[7] %> - <%= team[8] %></p>
+        </div>
+    <% }) %>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,8 @@
+<% if (currentUser && post.post_author.author_id.equals(currentUser._id)) { %>
+    <div class="post-btn-container">
+        <a href="/discussion/<%= post._id %>/edit" class="post-btn-sm edit-post-btn">Edit</a>
+        <form class="post-btn-form" action="/discussion/<%= post._id %>?_method=DELETE" method="POST">
+            <input type="submit" class="delete-post-btn post-btn-sm" value="Delete">
+        </form>
+    </div>
+<% } %>

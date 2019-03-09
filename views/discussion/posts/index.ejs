@@ -1,0 +1,14 @@
+<% include ../../partials/header %>
+
+<h1 class="text-center top-buffer">Discuss The NBA</h1>
+<% if (currentUser) { %>
+    <a href="/discussion/new" class="main-btn">New Post</a>
+<% } %>
+
+<div class="posts-container">
+    <% posts.forEach((post) => { %>
+        <% include ./post_card %>
+    <% }) %>
+</div>
+
+<% include ../../partials/footer %>

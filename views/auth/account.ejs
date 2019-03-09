@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+<h1 class="text-center">My Account</h1>
+<% include ./update_username_form %>
+
+<h1 class="text-center">My Posts</h1>
+<div class="posts-container">
+    <% posts.forEach((post) => { %>
+        <div class="post-card">
+            <% include ../discussion/posts/post_text %>
+            <% include ../discussion/posts/post_buttons %>
+        </div>
+    <% }) %>
+</div>
+
+<% include ../partials/footer %>
